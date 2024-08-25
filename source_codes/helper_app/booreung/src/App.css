@@ -21,3 +21,16 @@ input {
   width: 80%;
   max-width: 300px;
 }
+
+.all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  height: 100vh;
+  aspect-ratio: 9/20;
+  background-color: white;
+  overflow: scroll;
+}
