@@ -8,6 +8,9 @@
     align-items: center;
     margin-top: 2vh;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-bottom: 1vh;
 }
 
 .newsImg{

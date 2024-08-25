@@ -67,4 +67,7 @@
 }
 .newsArea{
     margin-bottom: 3vh;
+    height: 73vh;
+    width: 22vw;
+    overflow: scroll;
 }
