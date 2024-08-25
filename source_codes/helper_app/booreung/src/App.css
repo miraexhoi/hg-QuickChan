@@ -32,5 +32,4 @@ input {
   height: 100vh;
   aspect-ratio: 9/20;
   background-color: white;
-  overflow: scroll;
 }

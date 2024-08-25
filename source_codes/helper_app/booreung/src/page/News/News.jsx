@@ -85,7 +85,7 @@ const News = () => {
         ))}
       </div>
       {loading && <p>Loading...</p>} {/* 데이터 로딩 중일 때 표시 */}
-      {!hasMore && <p>No more news to load</p>}{" "}
+      {/* {!hasMore && <p>No more news to load</p>}{" "} */}
       {/* 더 이상 불러올 데이터가 없을 때 표시 */}
     </div>
   );
