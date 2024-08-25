@@ -1,0 +1,14 @@
+[
+    {
+      "id": 1,
+      "title": "Example Title 1",
+      "image": "https://via.placeholder.com/150",
+      "source": "Source 1"
+    },
+    {
+      "id": 2,
+      "title": "Example Title 2",
+      "image": "https://via.placeholder.com/150",
+      "source": "Source 2"
+    }
+  ]
