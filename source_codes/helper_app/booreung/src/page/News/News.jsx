@@ -1,30 +1,31 @@
-import React from 'react'
-import './News.css'
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import './News.css'
+// import axios from 'axios';
 import backImg from '../../assets/img/back.svg'
+import NewsCard from '../../common/NewsCard/NewsCard';
 import newsData from './newsData.json';
 
 const News = () => {
-  const [newsData, setNewsData] = useState([]);  // 뉴스 데이터를 저장하는 상태
+  const [newsDataState, setNewsData] = useState([]);  // 뉴스 데이터를 저장하는 상태
   const [page, setPage] = useState(1);  // 현재 페이지를 추적하는 상태
   const [loading, setLoading] = useState(false);  // 로딩 상태를 관리하는 상태
   const [hasMore, setHasMore] = useState(true);  // 추가 데이터를 불러올 수 있는지 추적
 
   useEffect(() => {
-    fetchMoreNews();  // 컴포넌트가 처음 렌더링될 때 데이터를 가져옴
-    window.addEventListener('scroll', handleScroll);  // 스크롤 이벤트 리스너 추가
-
-    return () => window.removeEventListener('scroll', handleScroll);  // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
-  }, []);
+    fetchMoreNews();
+    window.addEventListener('scroll', handleScroll);
+  
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [fetchMoreNews, handleScroll]);  // 의존성 배열에 추가
 
   const fetchMoreNews = async () => {
     if (loading || !hasMore) return;  // 이미 로딩 중이거나 더 이상 불러올 데이터가 없으면 종료
 
     setLoading(true);
     try {
-      const response = await axios.get(`https://api.example.com/news?page=${page}`);
-      const newNewsData = response.data;
+      // const response = await axios.get(`https://api.example.com/news?page=${page}`);
+      // const newNewsData = response.data;
+      const newNewsData = newsData.slice((page - 1) * 10, page * 10);
 
       setNewsData(prevNewsData => [...prevNewsData, ...newNewsData]);
       setPage(prevPage => prevPage + 1);
@@ -62,11 +63,16 @@ const News = () => {
         <div>농사</div>
       </div>
       <div>
-        <div key={item.id}>
-          <h2>{item.title}</h2>
-          <img src={item.image} alt={item.title} />
-          <p>{item.source}</p>
-        </div>
+      <div>
+        {newsDataState.map((item) => (
+          <NewsCard
+            key={item.id}
+            title={item.title}
+            image={item.image}
+            source={item.source}
+          />
+        ))}
+      </div>
       </div>
       {loading && <p>Loading...</p>}  {/* 데이터 로딩 중일 때 표시 */}
       {!hasMore && <p>No more news to load</p>}  {/* 더 이상 불러올 데이터가 없을 때 표시 */}
