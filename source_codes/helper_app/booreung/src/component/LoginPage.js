@@ -10,8 +10,10 @@ const LoginPage = () => {
         이메일과 비밀번호를<br />
         정확하게 입력해 주세요
       </h2>
+    
       <input type="email" placeholder="이메일" className="input-field" />
       <input type="password" placeholder="비밀번호" className="input-field" />
+      
       <button className="login-button">로그인하기</button>
     </div>
   );

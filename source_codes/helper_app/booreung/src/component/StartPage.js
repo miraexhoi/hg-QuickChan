@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './StartPage.css'; // CSS 파일을 import 합니다
-import { ReactComponent as Logo } from '../images/logo.svg'; // SVG 파일을 import 합니다
+import { ReactComponent as Logo } from '../assets/images/logo.svg'; // SVG 파일을 import 합니다
 
 function StartPage() {
   const navigate = useNavigate();
