@@ -1,7 +1,7 @@
 import React from "react";
-import "./CallTexi.css";
-import backImg from "../../assets/images/back.svg";
-import underImg from "../../assets/images/under.svg";
+import "./CallTexi1.css";
+import backImg from '../../../assets/images/back.svg'
+import underImg from '../../../assets/images/under.svg';
 
 const CallTexi = () => {
   return (

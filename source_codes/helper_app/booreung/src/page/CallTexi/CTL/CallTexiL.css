@@ -1,0 +1,42 @@
+.all {
+    display: flex;
+    flex-direction: column;
+}
+
+.backImgArea {
+    width: 20vw;
+    margin-top: 7vh;
+}
+
+.backImg {
+    width: 0.8vw;
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.point {
+    color: #5589FE;
+}
+
+.aroundText {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carImg{
+    width: 6vw;
+}
+
+.more {
+    font-size: 13px;
+}
+
+.texts {
+    
+}
