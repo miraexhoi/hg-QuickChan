@@ -3,7 +3,7 @@ import "./CallTexi1.css";
 import backImg from '../../../assets/images/back.svg'
 import underImg from '../../../assets/images/under.svg';
 
-const CallTexi = () => {
+const CallTexi1 = () => {
   return (
     <div className="all">
       <div className="backImgArea">
@@ -27,4 +27,4 @@ const CallTexi = () => {
   );
 };
 
-export default CallTexi;
+export default CallTexi1;

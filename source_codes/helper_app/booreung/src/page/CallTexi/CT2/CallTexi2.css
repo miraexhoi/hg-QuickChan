@@ -1,0 +1,105 @@
+all {
+  display: flex;
+  flex-direction: column;
+}
+
+.backImgArea {
+  width: 20vw;
+  margin-top: 7vh;
+}
+
+.backImg {
+  width: 0.8vw;
+}
+
+.Texts {
+  width: 18vw;
+  height: 7vh;
+  margin-top: 3.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pageTitle {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.smallComment {
+  color: #4d5969;
+  font-size: 15px;
+}
+
+.popupBackground {
+    width: 100%;
+    height: 100vw;
+    background-color: #F6F8F9;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.barImg {
+    width: 5vw;
+    margin-top: 0.7vw;
+}
+
+.inPopup{
+    width: 21vw;
+    font-size: 16px;
+    margin-top: 5vh;
+}
+
+.oneLine{
+    margin-left: 1vw;
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    height: 6vh;
+    border-radius: 40px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-top: 2vh;
+}
+
+.inInput{
+    border:none;
+    width: 19vw;
+    height: 2vh;
+}
+.inInput:focus{
+    outline: none;
+    font-weight: bold;
+}
+
+.next {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    background-color:#5589FE;
+    border-radius: 16px;
+}
+.next:hover{
+    cursor: pointer;
+}
+
+.popupArea{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
