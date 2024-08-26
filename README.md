@@ -113,7 +113,12 @@ http://<app-name>.azurewebsites.net 에 접속하여 페이지가 나온다면 �
 Homebrew는 macOS용 패키지 관리자입니다. 아직 설치하지 않았다면, 터미널을 열고 다음 명령어를 실행하여 Homebrew를 설치합니다:
 
 ```
- -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew --version
+```
+brew버전 확인 입니다. 설치가 되어 있다면 Azure CLI 설치로 넘어가면 됩니다
+
+```
+ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 Homebrew 설치가 완료되면, 설치가 정상적으로 되었는지 확인합니다:
 
