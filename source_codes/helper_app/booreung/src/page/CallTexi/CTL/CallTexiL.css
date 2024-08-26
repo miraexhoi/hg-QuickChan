@@ -1,0 +1,45 @@
+.all {
+    display: flex;
+    flex-direction: column;
+}
+
+.backImgArea {
+    width: 20vw;
+    margin-top: 7vh;
+}
+
+.backImg {
+    width: 0.8vw;
+}
+
+.contents {
+    height: 83vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.point {
+    color: #5589FE;
+}
+
+.imfo {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.carImg{
+    width: 6vw;
+    margin-bottom: 2vh;
+}
+
+.more {
+    font-size: 13px;
+    color:#8E98A8;
+    text-decoration: underline;
+}
+
+.more:hover {
+    cursor: pointer;
+}

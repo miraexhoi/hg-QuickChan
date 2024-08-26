@@ -1,0 +1,65 @@
+.all {
+    display: flex;
+    flex-direction: column;
+}
+
+.backImgArea {
+    width: 20vw;
+    margin-top: 7vh;
+}
+
+.backImg {
+    width: 0.8vw;
+}
+
+.backImg:hover{
+    cursor: pointer;
+}
+
+.aroundTexts{
+    width: 18vw;
+    margin-top:3vh;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pageTitle{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.smallComment{
+    color: #4D5969;
+    font-size: 15px;
+}
+
+.person {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.aroundBtn{
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.placeBtn{
+    width: 18.5vw;
+    height: 5.5vh;
+    border-radius: 10px;
+    color: #BED2FF;
+    border:1.5px solid  #BED2FF;
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+    box-sizing: border-box;
+}
+
+.placeBtn:hover{
+    cursor: pointer;
+}

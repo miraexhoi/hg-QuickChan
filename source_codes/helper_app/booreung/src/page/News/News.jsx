@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
-import "./News.css";
+import './News.css';
 // import axios from 'axios';
-import backImg from "../../assets/img/back.svg";
+import backImg from "../../assets/images/back.svg";
 import NewsCard from "../../common/NewsCard/NewsCard";
 import newsData from "./newsData.json";
 
@@ -52,8 +52,8 @@ const News = () => {
         <img className="backImg" src={backImg} />
       </div>
       <div className="aroundTexts">
-        <div className="todayNews">오늘의 소식</div>
-        <div className="checkTheNews">
+        <div className="pageTitle">오늘의 소식</div>
+        <div className="smallComment">
           의성군의 정책 및 소식을 확인해 보아요.
         </div>
       </div>

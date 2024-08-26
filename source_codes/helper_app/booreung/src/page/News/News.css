@@ -12,6 +12,10 @@
     width: 0.8vw;
 }
 
+.backImg:hover{
+    cursor: pointer;
+}
+
 .aroundTexts{
     width: 18vw;
     margin-top:3vh;
@@ -21,14 +25,14 @@
     justify-content: space-between;
 }
 
-.todayNews{
+.pageTitle{
     font-size: 23px;
     font-weight: bold;
 }
 
-.checkTheNews{
+.smallComment{
     color: #4D5969;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .category{
