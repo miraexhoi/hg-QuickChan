@@ -1,13 +1,31 @@
+<<<<<<< HEAD
 import sqlite3
 from flask import Flask, jsonify
+=======
+from flask import Flask, jsonify, send_from_directory
+>>>>>>> f27617a ([update] 서버 파일)
 import crawling
 import random
 
+<<<<<<< HEAD
 app = Flask(__name__)
+=======
+app = Flask(__name__, static_folder='web')
+
+departure = '출발지'
+departure_lat = '128.750551510'
+departure_don = '36.227984170'
+
+arrive = '도착지'
+arrive_lat = '128.585173'
+arrive_don = '36.302859'
+>>>>>>> f27617a ([update] 서버 파일)
 
 # 뉴스기사 URL
 ac_url = 'https://search.naver.com/search.naver?where=news&query=%EC%9D%98%EC%84%B1&sm=tab_opt&sort=1&photo=0&field=0&pd=0&ds=&de=&docid=&related=0&mynews=0&office_type=0&office_section_code=0&news_office_checked=&nso=so%3Add%2Cp%3Aall&is_sug_officeid=0&office_category=0&service_area=0'
 ht_url = 'https://search.naver.com/search.naver?where=news&query=%EA%B1%B4%EA%B0%95&sm=tab_opt&sort=1&photo=0&field=0&pd=0&ds=&de=&docid=&related=0&mynews=0&office_type=0&office_section_code=0&news_office_checked=&nso=so%3Add%2Cp%3Aall&is_sug_officeid=0&office_category=0&service_area=0'
+n_map = f'https://map.naver.com/p/directions/{departure_lat},{departure_don},{departure},,ADDRESS_POI/{arrive_lat},{arrive_don},{arrive},,ADDRESS_POI/-/transit?c=11.20,0,0,0,dh'
+print(n_map)
 
 # 택시 정보
 texi_num = ['054-833-8000', '054-833-7876', '054-832-2687', '054-833-1577', '054-833-7003', '054-834-9090', '054-861-0807', '054-862-9090', '010-3538-4302', '054-833-1313']
@@ -54,11 +72,21 @@ def connect_db():
 # 연결 확인용
 @app.route('/')
 def render_page():
+<<<<<<< HEAD
     return 'render_template('
 
 @app.route('/web/')
 def render_page_web():
     return 'render_template('
+=======
+    return send_from_directory(app.static_folder, 'index.html')
+
+
+@app.route('/web/')
+def serve_index():
+    return send_from_directory(app.static_folder, 'index.html')
+
+>>>>>>> f27617a ([update] 서버 파일)
 
 @app.route('/num')
 def num():
@@ -100,6 +128,16 @@ def get_data():
 @app.route('/user/location/<location>')
 def user_location(location):
     return 'Location: ' + location
+
+@app.route('/user/location/arrive/<location>')
+def user_arrive_location(location):
+    lat, don = crawling.loc_to_latdon(location)
+    return 'fuck'
+
+@app.route('/<path:path>')
+def serve_static_files(path):
+    return send_from_directory(app.static_folder, path)
+
 
 if __name__ == '__main__':
      app.run(debug=True)
