@@ -1,8 +1,21 @@
 import requests
 from bs4 import BeautifulSoup
-
 ac_url = 'https://search.naver.com/search.naver?where=news&ie=utf8&sm=nws_hty&query=%EC%9D%98%EC%84%B1'
 loc = '경북 의성군 가음면 빙계계곡길 51'
+
+
+departure = '출발지'
+departure_lat = '128.750551510'
+departure_don = '36.227984170'
+
+arrive = '도착지'
+arrive_lat = '128.585173'
+arrive_don = '36.302859'
+
+
+n_map = f'https://map.naver.com/p/directions/{departure_lat},{departure_don},{departure},,ADDRESS_POI/{arrive_lat},{arrive_don},{arrive},,ADDRESS_POI/-/transit/0?c=5.00,0,0,0,dh'
+
+
 def ac_parser(link):
     headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
     data = requests.get(link + 'list#none', headers=headers)
