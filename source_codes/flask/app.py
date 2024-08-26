@@ -1,3 +1,4 @@
+import os
 import sqlite3
 from flask import Flask, jsonify, send_from_directory
 import crawling
@@ -17,7 +18,7 @@ arrive_don = '36.302859'
 ac_url = 'https://search.naver.com/search.naver?where=news&query=%EC%9D%98%EC%84%B1&sm=tab_opt&sort=1&photo=0&field=0&pd=0&ds=&de=&docid=&related=0&mynews=0&office_type=0&office_section_code=0&news_office_checked=&nso=so%3Add%2Cp%3Aall&is_sug_officeid=0&office_category=0&service_area=0'
 ht_url = 'https://search.naver.com/search.naver?where=news&query=%EA%B1%B4%EA%B0%95&sm=tab_opt&sort=1&photo=0&field=0&pd=0&ds=&de=&docid=&related=0&mynews=0&office_type=0&office_section_code=0&news_office_checked=&nso=so%3Add%2Cp%3Aall&is_sug_officeid=0&office_category=0&service_area=0'
 n_map = f'https://map.naver.com/p/directions/{departure_lat},{departure_don},{departure},,ADDRESS_POI/{arrive_lat},{arrive_don},{arrive},,ADDRESS_POI/-/transit?c=11.20,0,0,0,dh'
-print(n_map)
+#print(n_map)
 
 # 택시 정보
 texi_num = ['054-833-8000', '054-833-7876', '054-832-2687', '054-833-1577', '054-833-7003', '054-834-9090', '054-861-0807', '054-862-9090', '010-3538-4302', '054-833-1313']
@@ -119,4 +120,4 @@ def serve_static_files(path):
 
 if __name__ == '__main__':
     initialize_db()
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)

@@ -45,4 +45,4 @@ def loc_to_latdon(loc_ti):
         print(f"API request failed with status code: {response.status_code}")
 
 
-loc_to_latdon(loc)
+#loc_to_latdon(loc)
