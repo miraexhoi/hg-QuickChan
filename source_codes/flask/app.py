@@ -1,6 +1,6 @@
 import os
 import sqlite3
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, request, jsonify, send_from_directory
 import crawling
 import random
 
@@ -47,6 +47,16 @@ def initialize_db():
         "관리중인 시니어" TEXT,
         FOREIGN KEY("관리중인 시니어") REFERENCES "시니어 정보"("유저 고유번호")
     )
+    ''')
+
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS "시니어 연락처 정보" (
+        "연락처 ID" INTEGER PRIMARY KEY AUTOINCREMENT,
+        "유저 고유번호" TEXT NOT NULL,
+        "이름" TEXT NOT NULL,
+        "전화번호" TEXT NOT NULL,
+        FOREIGN KEY("유저 고유번호") REFERENCES "시니어 정보"("유저 고유번호")
+    );
     ''')
 
     conn.commit()
@@ -103,6 +113,100 @@ def get_data():
 
     conn.close()
     return jsonify(result)
+
+# 고유 번호를 저장하는 API
+@app.route('/senior/save/signitureNum', methods=['POST'])
+def save_user():
+    data = request.json
+    user_id = data.get('유저 고유번호')
+
+    # 필수 정보가 누락되었는지 확인
+    if not user_id:
+        return jsonify({"error": "유저 고유번호는 필수입니다."}), 400
+
+    # 선택적 필드들 (입력되지 않으면 기본값은 None)
+    user_name = data.get('유저 이름', None)
+    blood_type = data.get('혈액형', None)
+    disease = data.get('개인 질환', None)
+    location = data.get('위치 정보', None)
+
+    try:
+        conn = connect_db()
+        cursor = conn.cursor()
+
+        # '시니어 정보' 테이블에 데이터 삽입
+        cursor.execute('''
+                    INSERT INTO "시니어 정보" ("유저 고유번호", "유저 이름", "혈액형", "개인 질환", "위치 정보")
+                    VALUES (?, ?, ?, ?, ?)
+                ''', (user_id, user_name, blood_type, disease, location))
+
+        conn.commit()
+        conn.close()
+
+        return jsonify({"message": "유저 정보가 성공적으로 저장되었습니다."}), 201
+
+    except sqlite3.IntegrityError:
+        return jsonify({"error": "해당 유저 고유번호가 이미 존재합니다."}), 409
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+# 연락처 정보를 저장하는 API
+@app.route('/senior/save/contacts', methods=['POST'])
+def save_contact():
+    data = request.json
+    user_id = data.get('유저 고유번호')  # 시니어 고유번호
+    name = data.get('이름')  # 자주 연락할 사람 이름
+    phone_number = data.get('전화번호')  # 자주 연락할 사람 전화번호
+
+    # 필수 정보가 누락되었는지 확인
+    if not user_id or not name or not phone_number:
+        return jsonify({"error": "유저 고유번호, 이름, 전화번호는 필수입니다."}), 400
+
+    try:
+        conn = connect_db()
+        cursor = conn.cursor()
+
+        # '시니어 연락처 정보' 테이블에 데이터 삽입
+        cursor.execute('''
+            INSERT INTO "시니어 연락처 정보" ("유저 고유번호", "이름", "전화번호")
+            VALUES (?, ?, ?)
+        ''', (user_id, name, phone_number))
+
+        conn.commit()
+        conn.close()
+
+        return jsonify({"message": "연락처 정보가 성공적으로 저장되었습니다."}), 201
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+# 특정 시니어의 모든 연락처 정보를 가져오는 API
+@app.route('/senior/contactAll/<user_id>', methods=['GET'])
+def get_contacts(user_id):
+    try:
+        conn = connect_db()
+        cursor = conn.cursor()
+
+        # 특정 시니어의 연락처 정보를 가져오는 쿼리
+        cursor.execute('''
+            SELECT * FROM "시니어 연락처 정보" WHERE "유저 고유번호" = ?
+        ''', (user_id,))
+
+        rows = cursor.fetchall()
+
+        # 데이터를 파이썬 자료형으로 변환
+        result = []
+        for row in rows:
+            result.append(dict(row))  # Row 객체를 딕셔너리로 변환
+
+        conn.close()
+
+        return jsonify(result), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 @app.route('/user/location/<location>')
 def user_location(location):
