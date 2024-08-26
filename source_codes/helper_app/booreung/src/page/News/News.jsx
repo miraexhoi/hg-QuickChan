@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import "./News.css";
+import './News.css';
 // import axios from 'axios';
 import backImg from "../../assets/images/back.svg";
 import NewsCard from "../../common/NewsCard/NewsCard";
