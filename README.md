@@ -26,10 +26,26 @@
 > **아래 제공하는 설치 방법을 통해 심사위원단이 여러분의 제품/서비스를 실제 Microsoft 애저 클라우드에 배포하고 설치할 수 있어야 합니다. 만약 아래 설치 방법대로 따라해서 배포 및 설치가 되지 않을 경우 본선에 진출할 수 없습니다.**
 
 --------------
+### 공통 준비 사항
+[vscode](https://code.visualstudio.com/download), [pycharm](https://www.jetbrains.com/help/pycharm/installation-guide.html), [IntelliJ](https://www.jetbrains.com/ko-kr/idea/) 등 IDE를 준비합니다.
+
+[프로젝트 다운로드](https://github.com/hackersground-kr/hg-QuickChan/archive/refs/heads/main.zip)
+및 압축해제를 진행합니다.
+
+이후 프로젝트를 IDE에서 열어줍니다.
+Downloads\hg-QuickChan-main 에 위치
+
+이후 하단 터미널을 열어줍니다.
+![터미널 이미지](./images/ide.PNG)
 
 <details>
 <summary><span style="font-size: 1.5em;">for 윈도우</span></summary>
 <div markdown="1">
+
+```git
+az --version
+```
+버전이 출력된다면 아래 CLI 설치를 넘겨도 됩니다.
 
 ### 사전 준비 사항
 https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli
@@ -40,18 +56,9 @@ https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure
 ```git
 az --version
 ```
-이후 설치 버전 확인
+이후 설치 확인
 
 
-ㅤ
-```git
-git clone https://github.com/Azure-Samples/msdocs-python-flask-webapp-quickstart
-```
-```git
-git remote -v //클론한 저장소의 정보 확인
-```
-깃 클론을 통해 로컬에 저장 진행
-ㅤ
 ```git
 cd $REPOSITORY_ROOT/source_codes/flask
 ```
@@ -115,7 +122,7 @@ Homebrew는 macOS용 패키지 관리자입니다. 아직 설치하지 않았다
 ```
 brew --version
 ```
-brew버전 확인 입니다. 설치가 되어 있다면 Azure CLI 설치로 넘어가면 됩니다
+brew버전 확인 입니다. 설치가 되어 있다면 Azure CLI로 넘어가면 됩니다
 
 ```
  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -142,19 +149,9 @@ az --version
 ```
 설치 후 Azure CLI 버전을 확인하여 올바르게 설치되었는지 확인합니다:
 
-```
-git clone https://github.com/Azure-Samples/msdocs-python-flask-webapp-quickstart
-```
-애플리케이션 클론
-Git을 사용하여 애플리케이션을 로컬로 클론합니다:
 
 ```
-git remote -v  # 클론한 저장소의 정보 확인
-```
-클론한 저장소의 정보를 확인합니다:
-
-```
-cd msdocs-python-flask-webapp-quickstart
+cd $REPOSITORY_ROOT/source_codes/flask
 ```
 Flask 백엔드 폴더로 이동합니다.
 
