@@ -16,13 +16,13 @@
     cursor: pointer;
 }
 
-.aroundTexts{
-    width: 18vw;
-    margin-top:3vh;
-    height: 7.5vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.Texts{
+width: 18vw;
+height: 7vh;
+margin-top:3.5vh;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 }
 
 .pageTitle{
@@ -70,6 +70,7 @@
     border: none;
 }
 .newsArea{
+    margin-top: 2vh;
     margin-bottom: 3vh;
     height: 73vh;
     width: 22vw;

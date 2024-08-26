@@ -51,7 +51,7 @@ const News = () => {
       <div className="backImgArea">
         <img className="backImg" src={backImg} />
       </div>
-      <div className="aroundTexts">
+      <div className="Texts">
         <div className="pageTitle">오늘의 소식</div>
         <div className="smallComment">
           의성군의 정책 및 소식을 확인해 보아요.
