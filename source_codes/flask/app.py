@@ -1,5 +1,5 @@
 import sqlite3
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, request, jsonify, send_from_directory
 import crawling
 import random
 
@@ -102,6 +102,43 @@ def get_data():
 
     conn.close()
     return jsonify(result)
+
+# 고유 번호를 저장하는 API
+@app.route('/senior/save/signitureNum', methods=['POST'])
+def save_user():
+    data = request.json
+    user_id = data.get('유저 고유번호')
+
+    # 필수 정보가 누락되었는지 확인
+    if not user_id:
+        return jsonify({"error": "유저 고유번호는 필수입니다."}), 400
+
+    # 선택적 필드들 (입력되지 않으면 기본값은 None)
+    user_name = data.get('유저 이름', None)
+    blood_type = data.get('혈액형', None)
+    disease = data.get('개인 질환', None)
+    location = data.get('위치 정보', None)
+
+    try:
+        conn = connect_db()
+        cursor = conn.cursor()
+
+        # '시니어 정보' 테이블에 데이터 삽입
+        cursor.execute('''
+                    INSERT INTO "시니어 정보" ("유저 고유번호", "유저 이름", "혈액형", "개인 질환", "위치 정보")
+                    VALUES (?, ?, ?, ?, ?)
+                ''', (user_id, user_name, blood_type, disease, location))
+
+        conn.commit()
+        conn.close()
+
+        return jsonify({"message": "유저 정보가 성공적으로 저장되었습니다."}), 201
+
+    except sqlite3.IntegrityError:
+        return jsonify({"error": "해당 유저 고유번호가 이미 존재합니다."}), 409
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/user/location/<location>')
 def user_location(location):
