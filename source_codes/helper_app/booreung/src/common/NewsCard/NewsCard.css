@@ -16,6 +16,7 @@
 .newsImg{
     width: 6.5vw;
     height: 6vw;
+    overflow: hidden;
     border-radius: 10px;
     margin-right: 1.5vw;
     margin-left: 1vw;

@@ -1,0 +1,14 @@
+.all {
+    display: flex;
+    flex-direction: column;
+}
+
+.backImgArea {
+    width: 20vw;
+    margin-top: 7vh;
+}
+
+.backImg {
+    width: 0.8vw;
+}
+

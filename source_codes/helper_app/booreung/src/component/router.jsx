@@ -6,6 +6,7 @@ import SignupStep1 from "../component/SignupStep1";
 import SignupStep2 from "../component/SignupStep2";
 import SignupStep3 from "../component/SignupStep3";
 import News from "../page/News/News";
+import CallTexi from "../page/CallTexi/CallTexi";
 
 const Router = () => {
   return (
@@ -18,6 +19,7 @@ const Router = () => {
         <Route path="/signup-step1" element={<SignupStep1 />} />
         <Route path="/signup-step2" element={<SignupStep2 />} />
         <Route path="/signup-step3" element={<SignupStep3 />} />
+        <Route path="/calltexi" element={<CallTexi />} />
         <Route path="/news" element={<News />}></Route>
       </Routes>
     </BrowserRouter>
