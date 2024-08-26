@@ -13,6 +13,10 @@
     margin-bottom: 1vh;
 }
 
+.background:hover{
+    cursor: pointer;
+}
+
 .newsImg{
     width: 6.5vw;
     height: 6vw;
