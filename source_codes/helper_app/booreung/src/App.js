@@ -13,4 +13,3 @@ function App() {
 }
 
 export default App;
-// 20:9
