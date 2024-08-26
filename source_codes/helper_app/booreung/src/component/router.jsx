@@ -9,6 +9,7 @@ import News from "../page/News/News";
 import CallTexi1 from "../page/CallTexi/CT1/CallTexi1";
 import CallTexiL from "../page/CallTexi/CTL/CallTexiL";
 import CallTexi2 from "../page/CallTexi/CT2/CallTexi2";
+import CallTexi3 from "../page/CallTexi/CT3/CallTexi3";
 
 const Router = () => {
   return (
@@ -23,6 +24,7 @@ const Router = () => {
         <Route path="/signup-step3" element={<SignupStep3 />} />
         <Route path="/calltexi1" element={<CallTexi1 />} />
         <Route path="/calltexi2" element={<CallTexi2 />} />
+        <Route path="/calltexi3" element={<CallTexi3 />} />
         <Route path="/calltexisuccess" element={<CallTexiL />} />
         <Route path="/news" element={<News />}></Route>
       </Routes>
