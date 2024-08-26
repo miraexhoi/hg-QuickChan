@@ -1,9 +1,15 @@
 import React from 'react'
-import './Main.css'
+import './Main.styled.js'
+import logoImg from '../../assets/images/logo.svg'
 
 const Main = () => {
   return (
-    <div>Main</div>
+    <div>
+      <div>
+        <img src={logoImg} />
+        </div>
+      <div></div>
+    </div>
   )
 }
 

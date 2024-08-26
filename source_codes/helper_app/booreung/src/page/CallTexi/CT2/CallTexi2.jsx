@@ -4,12 +4,14 @@ import backImg from "../../../assets/images/back.svg";
 import barImg from "../../../assets/images/bar.svg";
 import blackDot from "../../../assets/images/blackDot.svg";
 import blueDot from "../../../assets/images/bluDot.svg";
+import { useNavigate } from "react-router-dom";
 
 const CallTexi2 = () => {
-  return (
+    const Navigate = useNavigate();
+    return (
     <div className="all">
       <div className="backImgArea">
-        <img className="backImg" src={backImg} />
+        <img className="backImg" src={backImg} onClick={() => Navigate(`/calltexi1`)} />
       </div>
       <div className="Texts">
         <div className="pageTitle">택시 호출</div>
@@ -20,19 +22,17 @@ const CallTexi2 = () => {
       <div className="popupBackground">
         <img src={barImg} className="barImg" />
         <div className="popupArea">
-
-        <div className="inPopup">
-          <div className="oneLine">
-            <img src={blackDot} style={{marginRight:'0.6vw'}}/>현위치: 의성 빙계얼음수영장
+          <div className="inPopup">
+            <div className="oneLine">
+              <img src={blackDot} style={{ marginRight: "0.6vw" }} />
+              현위치: 의성 빙계얼음수영장
+            </div>
+            <div className="search">
+              <img src={blueDot} />
+              <input placeholder="도착지 검색" className="inInput"></input>
+            </div>
           </div>
-          <div className="search">
-            <img src={blueDot} />
-            <input placeholder="도착지 검색" className="inInput"></input>
-          </div>
-        </div>
-          <div className="next">
-            다음
-          </div>
+          <div className="next" onClick={() => Navigate(`/CallTexi3`)}>다음</div>
         </div>
       </div>
     </div>

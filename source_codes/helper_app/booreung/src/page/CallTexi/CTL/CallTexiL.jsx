@@ -2,12 +2,14 @@ import React from "react";
 import "./CallTexiL.css";
 import backImg from "../../../assets/images/back.svg";
 import carImg from "../../../assets/images/car.svg";
+import { useNavigate } from "react-router-dom";
 
 const CallTexiL = () => {
+  const Navigate = useNavigate();
   return (
     <div className="all">
       <div className="backImgArea">
-        <img className="backImg" src={backImg} />
+        <img className="backImg" src={backImg} onClick={() => Navigate(`/calltexi3`)} />
       </div>
       <div className="form">
         <div className="contents">

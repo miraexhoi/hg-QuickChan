@@ -1,0 +1,141 @@
+.all {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .backImgArea {
+    width: 20vw;
+    margin-top: 7vh;
+  }
+  
+  .backImg {
+    width: 0.8vw;
+  }
+
+.Texts {
+    width: 18vw;
+    height: 7vh;
+    margin-top: 3.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+.pageTitle {
+    font-size: 23px;
+    font-weight: bold;
+}
+  
+.smallComment {
+    color: #4d5969;
+    font-size: 15px;
+}
+
+.mapBackground {
+    width: 100%;
+    height: 100vw;
+    background-image: url('../../../assets/images/map.svg');
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    display: flex;
+    ;
+    align-items: flex-end;
+    margin-top: 2vh;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textsArea{
+    width: 100%;
+    height: 73vw;
+    background-color: #F6F8F9;
+    display: flex;
+    justify-content: center;
+}
+
+.toFrom{
+    width: 19vw;
+    height: 5vh;
+    border-radius: 40px;;
+    background-color: white;
+    margin-top: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 1vw;
+    padding-right: 2vw;
+}
+
+.formOnPopup {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goImg{
+    width: 1.5vw;
+}
+
+.barImg {
+    width: 5vw;
+    margin-top: 0.7vw;
+}
+
+.contentsArea{
+    width: 22vw;
+}
+
+.userBtn{
+    width: 7.5vw;
+    height: 4vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: #5589FE;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    margin-top: 0;
+}
+.userBtn:hover{
+    cursor: pointer;
+}
+
+.rideUser{
+    display: flex;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.priceTexts{
+    font-weight: 500;
+    margin-top: 1.5vh;
+}
+.pricePoint{
+    color: #5589FE;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.call {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    background-color:#5589FE;
+    border-radius: 16px;
+    margin-top: 2vh;
+}
+.call:hover{
+    cursor: pointer;
+}
