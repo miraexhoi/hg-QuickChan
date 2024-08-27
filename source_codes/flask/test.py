@@ -9,7 +9,7 @@ import time
 
 def fetch_page_content():
     chrome_options = Options()
-    chrome_options.add_argument('--headless')  # 헤드리스 모드
+    #chrome_options.add_argument('--headless')  # 헤드리스 모드
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
 
@@ -19,7 +19,7 @@ def fetch_page_content():
 
     try:
         # 네이버 지도 웹사이트 열기
-        driver.get("https://map.naver.com/")
+        driver.get("https://map.naver.com/p/directions/14326794.475744,4349286.6350886,%EA%B2%BD%EB%B6%81%20%EC%9D%98%EC%84%B1%EA%B5%B0%20%EC%9D%98%EC%84%B1%EC%9D%8D%20%EA%B5%B0%EC%B2%AD%EA%B8%B8%2057,,ADDRESS_POI/14326092.9821496,4349420.3806474,%EA%B2%BD%EB%B6%81%20%EC%9D%98%EC%84%B1%EA%B5%B0%20%EB%AC%B8%EC%86%8C3%EA%B8%B8%2089,,SIMPLE_POI/-/transit?c=15.00,0,0,0,dh")
 
         # 페이지 로딩 대기 (적절한 시간 조정 필요)
         WebDriverWait(driver, 10).until(
@@ -65,4 +65,3 @@ def fetch_page_content():
 
 # 함수 호출
 fetch_page_content()
-fetch_page_content() #배포 테스트

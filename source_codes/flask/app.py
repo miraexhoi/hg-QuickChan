@@ -212,7 +212,6 @@ def user_arrive_location(location):
 
 @app.route('/user/map/<lat>/<don>')
 def bus(num):
-    lat, don = crawling.loc_to_latdon(location)
     return '15'
 
 @app.route('/<path:path>')
