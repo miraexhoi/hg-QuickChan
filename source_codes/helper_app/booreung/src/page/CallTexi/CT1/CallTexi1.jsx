@@ -17,7 +17,7 @@ const CallTexi1 = () => {
           시니어를 위해 간편하게 택시를 호출해줘요.
         </div>
         <div className="person">
-          <img src={underImg} /> 권순옥 님
+          <img src={underImg} /> 권옥자 님
         </div>
         <div className="aroundBtn">
         <div className="placeBtn" onClick={() => Navigate(`/calltexi2`)}>

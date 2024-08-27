@@ -8,11 +8,15 @@ import underImg from "../../../assets/images/under2.svg";
 import { useNavigate } from "react-router-dom";
 
 const CallTexi3 = () => {
-    const Navigate = useNavigate()
+  const Navigate = useNavigate();
   return (
     <div className="all">
       <div className="backImgArea">
-        <img className="backImg" src={backImg} onClick={() => Navigate(`/calltexi2`)} />
+        <img
+          className="backImg"
+          src={backImg}
+          onClick={() => Navigate(`/calltexi2`)}
+        />
       </div>
       <div className="Texts">
         <div className="pageTitle">택시 호출</div>
@@ -31,24 +35,34 @@ const CallTexi3 = () => {
           </div>
           <div className="textsArea">
             <div className="contentsArea">
-                <div>
+              <div>
                 <div className="rideUser">
-                <button className="userBtn">
-                  권순옥
-                  <img src={underImg} />
-                </button>
-                <span style={{ fontWeight: "bold", marginLeft: "0.5vw" }}>
-                  님 탑승
-                </span>
-              </div>
-              <div className="priceTexts">
-                결제 방법:<span className="pricePoint"> 만나서 결제</span>
-              </div>
+                  <button className="userBtn">
+                    권옥자
+                    <img src={underImg} />
+                  </button>
+                  <span style={{ fontWeight: "bold", marginLeft: "0.5vw" }}>
+                    님 탑승
+                  </span>
                 </div>
-                <div style={{display:'flex', justifyContent:'flex-end'}}>
-                    <div style={{fontWeight:'600', marginTop:'1vh'}}>예상 요금 <span style={{fontWeight:'700', fontSize:'24px'}}>27,900원</span></div>
+                <div className="priceTexts">
+                  결제 방법:<span className="pricePoint"> 만나서 결제</span>
                 </div>
-                <div className="call" onClick={() => Navigate(`/calltexisuccess`)}>호출</div>
+              </div>
+              <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                <div style={{ fontWeight: "600", marginTop: "1vh" }}>
+                  예상 요금{" "}
+                  <span style={{ fontWeight: "700", fontSize: "24px" }}>
+                    27,900원
+                  </span>
+                </div>
+              </div>
+              <div
+                className="call"
+                onClick={() => Navigate(`/calltexisuccess`)}
+              >
+                호출
+              </div>
             </div>
           </div>
         </div>
