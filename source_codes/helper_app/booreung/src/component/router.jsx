@@ -12,6 +12,7 @@ import CallTexi3 from "../page/CallTexi/CT3/CallTexi3";
 import Main from "../page/Main/Main";
 import StartPage from "./start_page/StartPage";
 import Mypage from "../page/Mypage/Mypage";
+import ManageTel from "../page/Manage/ManageTel";
 
 const Router = () => {
   return (
@@ -30,6 +31,7 @@ const Router = () => {
         <Route path="/news" element={<News />}></Route>
         <Route path="/main" element={<Main />}></Route>
         <Route path="/mypage" element={<Mypage />}></Route>
+        <Route path="/managetel" element={<ManageTel />}></Route>
       </Routes>
     </BrowserRouter>
   );

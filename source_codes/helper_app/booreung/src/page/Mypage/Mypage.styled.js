@@ -24,10 +24,10 @@ height: 8vh;
 export const text = styled.div`
 color: #8E98A8;
 font-size: 14px;
-margin-top: 2vh;
+margin-top: 3.5vh;
 `
 export const profileForm = styled.div`
-width: 27vw;
+width: 22vw;
 height: 16vh;
 border-radius: 20px;
 box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
@@ -57,7 +57,7 @@ display: flex;
 margin-top: 1vh;
 `
 export const add = styled.div`
-width: 27vw;
+width: 22vw;
 font-weight: bold;
     font-size: 20px;
     color: white;
