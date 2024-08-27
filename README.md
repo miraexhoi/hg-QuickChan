@@ -32,8 +32,8 @@
 [프로젝트 다운로드](https://github.com/hackersground-kr/hg-QuickChan/archive/refs/heads/main.zip)
 및 압축해제를 진행합니다.
 
-이후 프로젝트를 IDE에서 열어줍니다.
-Downloads\hg-QuickChan-main 에 위치
+이후 프로젝트를 IDE 에서 열어줍니다.
+Downloads\hg-QuickChan-main 에 위치합니다.
 
 이후 하단 터미널을 열어줍니다.
 ![터미널 이미지](./images/ide.PNG)
@@ -51,6 +51,7 @@ az --version
 https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli
 
 애저 CLI 설치
+(설치 이후 IDE를 재시작 해주세요)
 
 
 ```git
@@ -60,9 +61,9 @@ az --version
 
 
 ```git
-cd $REPOSITORY_ROOT/source_codes/flask
+cd ./source_codes/flask
 ```
-백엔드 폴더로 이동
+백엔드 폴더로 이동(프로젝트 폴더 내에서 이동)
 
 
 # 시작하기
@@ -151,9 +152,10 @@ az --version
 
 
 ```
-cd $REPOSITORY_ROOT/source_codes/flask
+cd ./source_codes/flask
 ```
 Flask 백엔드 폴더로 이동합니다.
+REPOSITORY_ROOT/source_codes/flask 으로 이동
 
 # 시작하기
 

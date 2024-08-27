@@ -208,7 +208,12 @@ def user_location(location):
 @app.route('/user/location/arrive/<location>')
 def user_arrive_location(location):
     lat, don = crawling.loc_to_latdon(location)
-    return 'fuck'
+    return '1'
+
+@app.route('/user/map/<lat>/<don>')
+def bus(num):
+    lat, don = crawling.loc_to_latdon(location)
+    return '15'
 
 @app.route('/<path:path>')
 def serve_static_files(path):
