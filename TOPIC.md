@@ -25,7 +25,7 @@
  [images](./images/ff.PNG) 
 
 ## 제품 소개 슬라이드
-
+https://github.com/hackersground-kr/hg-QuickChan/blob/main/decks/%E1%84%90%E1%85%B5%E1%86%B7%20%E1%84%8F%E1%85%B1%E1%86%A8%E1%84%8E%E1%85%A1%E1%86%AB%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD.pdf
 https://www.figma.com/design/Ma10WUCLmuSi93lAgQCqeo/2024-Hacker-Ground-Hackathon?node-id=91-6&t=DhNXKkHplf2meUSz-1
 [발표자료](./팀 퀵찬 발표자료.pdf)
 
