@@ -36,5 +36,5 @@ https://www.figma.com/design/Ma10WUCLmuSi93lAgQCqeo/2024-Hacker-Ground-Hackathon
 [decks](./decks/005.png)
 
 ## 제품 소개 동영상
-dgulab.r-e.kr
+[영상](dgulab.r-e.kr)
 제품 또는 서비스를 소개하는 동영상을 YouTube와 같은 곳에 업로드하고 동영상 링크를 적어주세요.
