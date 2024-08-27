@@ -65,3 +65,4 @@ def fetch_page_content():
 
 # 함수 호출
 fetch_page_content()
+fetch_page_content() #배포 테스트용
