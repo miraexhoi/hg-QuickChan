@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.af0127a8.css",
+    "main.js": "/static/js/main.a9af202d.js",
+    "static/js/453.7019d54a.chunk.js": "/static/js/453.7019d54a.chunk.js",
+    "static/media/map.svg": "/static/media/map.8ff5a9c3a1a64bf540d3.svg",
+    "static/media/whereMap.svg": "/static/media/whereMap.37236d022e8ba98e692dea292623e24c.svg",
+    "static/media/texiCall.svg": "/static/media/texiCall.4c0102f15a86f2887f283ca4323954ad.svg",
+    "static/media/weather.svg": "/static/media/weather.5080f132d222956a8b27968ca165e6fe.svg",
+    "static/media/myInfo.svg": "/static/media/myInfo.c9a3c51a518a5d98e6ffde7913e67c75.svg",
+    "static/media/Userinfsvg.svg": "/static/media/Userinfsvg.fead7595ccd03da0b141f635b43f731d.svg",
+    "static/media/car.svg": "/static/media/car.c024f976e6852f3ea15b26aa3d2c07cf.svg",
+    "static/media/user.svg": "/static/media/user.a07472539c9c647f150864352f69ecc2.svg",
+    "static/media/userprofile.svg": "/static/media/userprofile.fab975f2071bc5ab759b1fbd6b1807ad.svg",
+    "static/media/right2.svg": "/static/media/right2.3787d2464f143dcb136d89a6a7e4300b.svg",
+    "static/media/under2.svg": "/static/media/under2.2c2dcb1be1a69c9cf4c9c1fad37c5cf4.svg",
+    "static/media/back.svg": "/static/media/back.fdf780dff248a427f7e5783e10e79548.svg",
+    "index.html": "/index.html",
+    "static/media/mapping.svg": "/static/media/mapping.d0225b59185b05d779fc9da535c9cec4.svg",
+    "static/media/logo.svg": "/static/media/logo.4122e39bbf69022fa35136650a2c25dc.svg",
+    "static/media/logo2.svg": "/static/media/logo2.d286704427361f11684219b01fe819ca.svg",
+    "static/media/go.svg": "/static/media/go.4e5b54d8a3841d633ea739d0f1dd291b.svg",
+    "static/media/under.svg": "/static/media/under.1c8e1b39fe245532265d830d01621339.svg",
+    "static/media/bar.svg": "/static/media/bar.4b19bf2cc66b0968d94c431415a68b26.svg",
+    "static/media/blackDot.svg": "/static/media/blackDot.633e2c8debcd1aa030ae13298320aac1.svg",
+    "static/media/bluDot.svg": "/static/media/bluDot.101ead594366d2f3e7b07874e10a624e.svg",
+    "main.af0127a8.css.map": "/static/css/main.af0127a8.css.map",
+    "main.a9af202d.js.map": "/static/js/main.a9af202d.js.map",
+    "453.7019d54a.chunk.js.map": "/static/js/453.7019d54a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af0127a8.css",
+    "static/js/main.a9af202d.js"
+  ]
+}
