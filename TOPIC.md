@@ -27,6 +27,7 @@
 ## 제품 소개 슬라이드
 
 https://www.figma.com/design/Ma10WUCLmuSi93lAgQCqeo/2024-Hacker-Ground-Hackathon?node-id=91-6&t=DhNXKkHplf2meUSz-1
+[발표자료](./팀 퀵찬 발표자료.pdf)
 
 [decks](./decks/001.png)
 [decks](./decks/002.png)
