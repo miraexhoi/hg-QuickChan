@@ -1,0 +1,33 @@
+name: Deploy to Azure Web App
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'source_codes/flask/**'
+  pull_request:
+    paths:
+      - 'source_codes/flask/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Azure CLI
+      uses: azure/setup-azure-cli@v1
+      with:
+        azure-cli-version: '2.x'
+
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Deploy to Azure Web App
+      run: |
+        az webapp up --runtime PYTHON:3.9 --sku B1 --logs --resource-group rg-QuickChan --location KoreaCentral

@@ -1,4 +1,6 @@
 import requests
+import asyncio
+from pyppeteer import launch
 from bs4 import BeautifulSoup
 ac_url = 'https://search.naver.com/search.naver?where=news&ie=utf8&sm=nws_hty&query=%EC%9D%98%EC%84%B1'
 loc = '경북 의성군 가음면 빙계계곡길 51'
@@ -57,5 +59,31 @@ def loc_to_latdon(loc_ti):
     else:
         print(f"API request failed with status code: {response.status_code}")
 
+
+def fetch_page_content(url):
+    # Session 객체 생성
+    with requests.Session() as session:
+        # 기본 설정을 공유할 수 있음 (예: 헤더, 쿠키)
+        session.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'})
+
+        # URL로 HTTP GET 요청을 보냄
+        response = session.get(url)
+
+        # 응답이 성공적이지 않으면 예외를 발생시킴
+        response.raise_for_status()
+
+        # 페이지의 HTML 콘텐츠를 가져옴
+        html_content = response.text
+
+        # BeautifulSoup으로 HTML 파싱
+        soup = BeautifulSoup(html_content, 'html.parser')
+
+        # 예시 CSS 선택자 사용
+        elements = soup.select('#tab_pubtrans_directions > ul:nth-child(2) > li.sc-1tj2a62.EeMOl.is_selected > div > ol.list_pubtrans_directions_step.city')
+        print(elements)
+
+        # 결과 출력
+        for element in elements:
+            print(element.text)
 
 #loc_to_latdon(loc)
