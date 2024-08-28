@@ -4,7 +4,8 @@
 
 ## 참고 문서
 
-> 아래 두 링크는 해커톤에서 앱을 개발하면서 참고할 만한 문서들입니다. 이 문서들에서 언급한 서비스 이외에도 더 많은 서비스들이 PaaS, SaaS, 서버리스 형태로 제공되니 참고하세요.
+> 아래 두 링크는 해커톤에서 앱을 개발하면서 참고할 만한 문서들입니다.  
+ 이 문서들에서 언급한 서비스 이외에도 더 많은 서비스들이 PaaS, SaaS, 서버리스 형태로 제공되니 참고하세요.
 
 - [순한맛](./REFERENCES_BASIC.md)
 - [매운맛](./REFERENCES_ADVANCED.md)
@@ -14,6 +15,19 @@
 <!-- 아래 링크는 지우지 마세요 -->
 [제품/서비스 소개 보기](TOPIC.md)
 <!-- 위 링크는 지우지 마세요 -->
+![image](https://github.com/user-attachments/assets/1bbbdb44-441f-458e-a4d2-d423d9e9e8c7)
+![image](https://github.com/user-attachments/assets/58d89807-a463-4967-8470-34f18f23b2c2)
+![image](https://github.com/user-attachments/assets/ee239f42-4ec3-48aa-898b-8dd8c75b3bf5)
+![image](https://github.com/user-attachments/assets/9b62e6db-1d1e-43ce-ab00-fd7482f697b4)
+![image](https://github.com/user-attachments/assets/737fbb42-9acd-41ef-b28e-1fe2ecc71f97)
+![image](https://github.com/user-attachments/assets/5fab51a4-29b5-431d-b2e2-151e3c4618af)
+![image](https://github.com/user-attachments/assets/8a700849-f350-4c39-bd8d-d8da1ab7dd1d)
+![image](https://github.com/user-attachments/assets/12b9b65d-341c-4c3d-85d0-0e45f8216ee4)
+![image](https://github.com/user-attachments/assets/a96f0fc7-97e6-4d80-ae5b-a06a22ccf840)
+![image](https://github.com/user-attachments/assets/a266f635-cd06-4704-b918-c1459e8de16f)
+![image](https://github.com/user-attachments/assets/e4ac5622-9f42-4ac0-b45f-229069fa68fa)
+
+
 
 ## 오픈 소스 라이센스
 
@@ -23,9 +37,9 @@
 
 ## 설치 방법
 
-> **아래 제공하는 설치 방법을 통해 심사위원단이 여러분의 제품/서비스를 실제 Microsoft 애저 클라우드에 배포하고 설치할 수 있어야 합니다. 만약 아래 설치 방법대로 따라해서 배포 및 설치가 되지 않을 경우 본선에 진출할 수 없습니다.**
+> **아래 제공하는 설치 방법을 통해 심사위원단이 여러분의 제품/서비스를 실제 Microsoft 애저 클라우드에 배포하고 설치할 수 있어야 합니다.  
+ 만약 아래 설치 방법대로 따라해서 배포 및 설치가 되지 않을 경우 본선에 진출할 수 없습니다.**
 
---------------
 ### 공통 준비 사항
 [vscode](https://code.visualstudio.com/download), [pycharm](https://www.jetbrains.com/help/pycharm/installation-guide.html), [IntelliJ](https://www.jetbrains.com/ko-kr/idea/) 등 IDE를 준비합니다.
 
